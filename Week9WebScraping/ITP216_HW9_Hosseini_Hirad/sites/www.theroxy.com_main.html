@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6 ie"><![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7 ie"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<script>
+    if ( /*@cc_on!@*/ false) {
+        document.documentElement.className += ' ie10';
+    }
+    //detect ie11 by CSS Capability Testing
+    if ('msTextCombineHorizontal' != undefined) {
+
+        //add class if userAgent isn't Chrome or Safari
+        var ua = navigator.userAgent;
+        var chromesafari_check = new RegExp("Safari");
+        if (chromesafari_check.exec(ua) != null) {
+            var isMSIE = false;
+        } else {
+            var isMSIE = true;
+        }
+
+        if (isMSIE) {
+            document.documentElement.className += ' ie11';
+        }
+    }
+    </script>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<title>Events | The Roxy Theatre</title>
+<meta content="The Roxy Theatre" name="author">
+<meta content="Events | The Roxy Theatre" property="og:title">
+<meta content="" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.theroxy.com/events" property="og:url"/>
+<meta content="https://www.theroxy.com/assets/img/default_thumb.jpg" property="og:image"/>
+<meta content="https://www.theroxy.com/assets/img/default_thumb.jpg" property="thumbnail"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@theroxy" name="twitter:site"/>
+<meta content="Events | The Roxy Theatre" name="twitter:title"/>
+<meta content="" name="twitter:description"/>
+<meta content="https://www.theroxy.com/assets/img/default_thumb.jpg" name="twitter:image"/>
+<meta content="width=1200" name="viewport"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://www.theroxy.com/assets/production/e87e739bcc//css/style.css" media="screen" rel="stylesheet"/>
+<link href="https://www.theroxy.com/assets/production/e87e739bcc//css/print.css" media="print" rel="stylesheet"/>
+<script>
+    var BASE_URL = "https://www.theroxy.com/";
+    var APPLICATION_URL = "https://www.theroxy.com/";
+    var S3_BUCKET = "aeglive-theroxy";
+    var SHOWTIME_TRANSLATION_ID = "engUS";
+    var FRAMEWORK_ASSETS_PATH = "91273917cc";
+    var FRAMEWORK_JS_PATH = "";
+    var FRAMEWORK_PATH_TO_JS = "";
+    var SITE_S3_URL = "https://www.theroxy.com/assets/production/e87e739bcc//";
+        var ADMIN_S3_URL = "/assets-showtime/production/8b47c11127/";
+        var _sf_startpt = (new Date()).getTime();
+    </script>
+<script src="https://www.theroxy.com/assets/production/e87e739bcc//js/libs/modernizr-1.6.min.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NS95HC5');</script>
+<!-- End Google Tag Manager -->
+<meta content="https://images.discovery-prod.axs.com/2023/07/barns-courtney-tickets_11-15-23_23_64b87bb2e48c0.jpg" property="og:image"/>
+<meta content="https://images.discovery-prod.axs.com/2023/07/barns-courtney-tickets_11-15-23_23_64b87bb2e48c0.jpg" property="thumbnail"/>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+<style type="text/css">
+		body{
+			background-color:#222222;
+		}
+	</style>
+<style type="text/css">
+					html,
+			button,
+			input,
+			select,
+			textarea {
+				font-family: 'Lato', sans-serif 			}
+						#container{
+				background-image: url(https://www.theroxy.com/assets/img/BKGD-c7779d045d.jpg);
+			}
+			div{
+		/*background: rgba(255,255,255,0.1);
+		box-shadow: inset 0px 0px 1px rgba(0,0,0,.5);*/
+	}
+	/*.readmore {
+		background: -moz-linear-gradient(top,  rgba(221,221,221,0) 0%, rgba(221,221,221,0.8) 20%, rgba(221,221,221,1) 50%, rgba(221,221,221,1) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(221,221,221,0)), color-stop(20%,rgba(221,221,221,0.8)), color-stop(50%,rgba(221,221,221,1)), color-stop(100%,rgba(221,221,221,1)));
+		background: -webkit-linear-gradient(top,  rgba(221,221,221,0) 0%,rgba(221,221,221,0.8) 20%,rgba(221,221,221,1) 50%,rgba(221,221,221,1) 100%);
+		background: -o-linear-gradient(top,  rgba(221,221,221,0) 0%,rgba(221,221,221,0.8) 20%,rgba(221,221,221,1) 50%,rgba(221,221,221,1) 100%);
+		background: -ms-linear-gradient(top,  rgba(221,221,221,0) 0%,rgba(221,221,221,0.8) 20%,rgba(221,221,221,1) 50%,rgba(221,221,221,1) 100%);
+		background: linear-gradient(to bottom,  rgba(221,221,221,0) 0%,rgba(221,221,221,0.8) 20%,rgba(221,221,221,1) 50%,rgba(221,221,221,1) 100%);
+	}*/
+
+					header .logo{
+				/*width: 225px;*/
+				height: 225px;
+			}
+			.logo a, .logo span {
+				background: url(https://www.theroxy.com/assets/img/roxy-50-circle-black-logo-87283d5dcd.png) no-repeat center top;
+			}
+					.header-fixed header .logo, .layout-mobile header .logo {
+				width: 89px;
+				height: 60px;
+			}
+			.header-fixed header .logo a, .header-fixed header .logo span, .layout-mobile header .logo a, .layout-mobile header .logo span {
+				background: url(https://aeglive-theroxy.s3.amazonaws.com/img/roxysmalllogo89x60-3f2dde4eef.png) no-repeat center top;
+			}
+			.layout-desktop.header-fixed header nav{
+				max-width:calc(100% - 89px - 60px);
+			}
+	</style>
+<style>
+  .ada-statement {
+      position: absolute !important;
+      clip: rect(1px 1px 1px 1px);
+      clip: rect(1px, 1px, 1px, 1px);
+      left: -10000px;
+      top: -1px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+  }
+</style>
+</meta></meta></head>
+<body class="index fullscreen_theme header-fixed" id="events_axs">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-NS95HC5" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> <div class="ada-statement">If you are using a screen reader and are having problems using this website, please call (323) 513-6222 for assistance.</div>
+<script id="bootstrap_config" type="text/json">
+		{"facebook":"theroxy","instagram_id":"236027034","twitter":"theroxy"}	</script>
+<div id="container">
+<div class="search_container toolbar_search">
+<div class="search_wrapper">
+<form action="https://www.theroxy.com/events/search " class="cse-search-box" data-attr-searchtype="event_search">
+<div>
+<input name="cx" type="hidden" value=""/>
+<input name="cof" type="hidden" value="FORID:9"/>
+<input name="ie" type="hidden" value="UTF-8"/>
+<input name="q" placeholder="Search" size="31" type="text"/>
+<button class="fa fa-search" type="submit"></button>
+</div>
+</form> </div>
+</div>
+<div class="animated" id="toolbar">
+<div class="toolbar_wrapper">
+<div class="align_left">
+<span>Ticketed by AXS.com -</span> <a class="" href="https://www.theroxy.com/" title="Buy Tickets">Buy Tickets</a> </div>
+<div class="align_right">
+<div class="search_button">
+<div class="is_not_selected active">Search <i aria-hidden="true" class="fa fa-search"></i></div>
+<div class="is_selected">Close <i aria-hidden="true" class="fa fa-times"></i></div>
+</div>
+<ul class="social">
+<li><a class="fb" href="http://www.facebook.com/theroxy" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+<li><a class="tw" href="http://www.twitter.com/theroxy" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+<li><a class="in" href="http://www.instagram.com/theroxy" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+<li><a class="rsslink" href="https://www.theroxy.com/events/rss" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></li>
+</ul>
+</div>
+</div> </div>
+<header class="main_header">
+<div class="header-wrapper">
+<div class="logo">
+<a href="https://www.theroxy.com/" title="The Roxy Theatre">The Roxy Theatre</a>
+</div> <nav class="nav">
+<div class="nav-trigger">
+<span id="bars"><i></i></span> <span class="nav-name">Menu</span>
+</div>
+<ul class="clearfix">
+<li class="mobile_search">
+<div class="search_container show_mobile_navigation">
+<div class="search_wrapper">
+<form action="https://www.theroxy.com/events/search " class="cse-search-box" data-attr-searchtype="event_search">
+<div>
+<input name="cx" type="hidden" value=""/>
+<input name="cof" type="hidden" value="FORID:9"/>
+<input name="ie" type="hidden" value="UTF-8"/>
+<input name="q" placeholder="Search" size="31" type="text"/>
+<button class="fa fa-search" type="submit"></button>
+</div>
+</form> </div>
+</div>
+</li>
+<li class="page_6 no-sub active">
+<a class="someclass page_6 active" href="https://www.theroxy.com/events">Shows</a> </li>
+<li class="page_12 no-sub">
+<a class="someclass page_12" href="https://www.theroxy.com/faqs">FAQ</a> </li>
+<li class="page_9 no-sub">
+<a class="someclass page_9" href="https://www.theroxy.com/box-office">Box Office</a> </li>
+<li class="page_10 has-sub">
+<a class="someclass page_10" href="https://www.theroxy.com/venue-info/directions">Venue Info</a> <div class="sub">
+<ul>
+<li>
+<a class="page_17" href="https://www.theroxy.com/venue-info/directions">Directions</a> </li>
+<li>
+<a class="page_16" href="https://www.theroxy.com/venue-info/contact-us">Contact Us</a> </li>
+<li>
+<a class="page_13" href="https://www.theroxy.com/venue-info/email-list">Email List</a> </li>
+<li>
+<a class="page_15" href="https://www.theroxy.com/venue-info/environment">Environment</a> </li>
+<li>
+<a class="page_18" href="https://www.theroxy.com/venue-info/history">History</a> </li>
+<li>
+<a class="gh_page page_27 gh_page_redirect page_27" href="https://www.goldenvoice.com/health-policy/" rel="external" target="_blank">Health &amp; Safety</a> </li>
+</ul>
+</div>
+</li>
+<li class="page_11 no-sub">
+<a class="someclass page_11" href="https://www.theroxy.com/special-events">Special Events</a> </li>
+</ul>
+</nav>
+</div> </header>
+<div id="layout">
+<div class="clearfix" id="content">
+<div class="full clearfix">
+<div class="page_header_container eventlist_header_container animated fixed">
+<div>
+<div class="page_header_left">
+<h1>Calendar of Events</h1>
+</div>
+<div class="page_header_right">
+<a class="rss fa fa-rss fa-text" href="https://www.theroxy.com/events/rss" title="Subscribe to Events Feed"></a>
+<a class="print fa fa-print fa-text" href="javascript:window.print();" title="Print"></a>
+<a class="view-all fa-text" href="https://www.theroxy.com/events/all">View All</a> </div>
+</div>
+</div>
+<div class="full_column clearfix">
+<div class="event_list" id="eventsList">
+<div class="entry roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/495569" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/07/cri-live-tickets_10-21-23_23_64bee02de0dd9.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/495569" title="More Info">
+					CRi (Live)				</a>
+</h3>
+<h4 class="supporting animated">with Leaving Laurel</h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Sat, Oct 21, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					9:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/495569/cri-live-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry alt roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/503197" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/09/leo-skepi_09-15-23_24_6504e16111531.png"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour">Confidence Unleashed</h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/503197" title="More Info">
+					Leo Skepi				</a>
+</h3>
+<h4 class="supporting animated"></h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Sun, Oct 22, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					8:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/503197/leo-skepi-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/507860" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/10/inner-wave-tickets_10-23-23_23_652dafb02717d.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/507860" title="More Info">
+					Inner Wave				</a>
+</h3>
+<h4 class="supporting animated">with FRIKI FRAN</h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Mon, Oct 23, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					8:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/507860/inner-wave-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry alt roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/495613" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/07/marty-stuart-his-fabulous-superlatives-tickets_10-24-23_23_64c000ce21acc.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/495613" title="More Info">
+					An evening with Marty Stuart &amp; His Fabulous Superlatives				</a>
+</h3>
+<h4 class="supporting animated"></h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Tue, Oct 24, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					8:30 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/495613/an-evening-with-marty-stuart-his-fabulous-superlatives-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/488307" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/06/underscores-tickets_10-25-23_23_647936d034d75.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/488307" title="More Info">
+					underscores				</a>
+</h3>
+<h4 class="supporting animated">with Jedwill</h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Wed, Oct 25, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					8:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/488307/underscores-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry alt roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/492292" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/07/sen-senra-tickets_10-26-23_23_64a7af31043ed.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/492292" title="More Info">
+					Sen Senra				</a>
+</h3>
+<h4 class="supporting animated"></h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Thu, Oct 26, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					8:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/492292/sen-senra-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/497449" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/08/strfkr-tickets_10-27-23_23_64d1cdb6d5516.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/497449" title="More Info">
+					STRFKR				</a>
+</h3>
+<h4 class="supporting animated">with Ruth Radelet</h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Fri, Oct 27, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					9:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/497449/strfkr-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry alt roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/494367" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/07/nation-of-language-tickets_10-28-23_23_64b726b51f427.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice x KCRW present</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/494367" title="More Info">
+					Nation of Language				</a>
+</h3>
+<h4 class="supporting animated">with Miss Grit and Travis Holcombe </h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Sat, Oct 28, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					9:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/494367/nation-of-language-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/500394" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/09/the-living-tombstone-tickets_10-29-23_23_64f7616b29f6c.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/500394" title="More Info">
+					The Living Tombstone				</a>
+</h3>
+<h4 class="supporting animated">with QBomb and ElyOtto</h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Sun, Oct 29, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					7:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/500394/the-living-tombstone-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry alt roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/497949" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/08/mk-gee_08-08-23_24_64d2b8dba6196.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/497949" title="More Info">
+					An Evening with Mk.gee 				</a>
+</h3>
+<h4 class="supporting animated"></h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Wed, Nov 1, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					8:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/497949/an-evening-with-mk-gee-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/501075" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/09/five-headed-cobra-tickets_11-02-23_23_64f6c98f93977.png"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/501075" title="More Info">
+					Five Headed Cobra				</a>
+</h3>
+<h4 class="supporting animated">with Hot Crazy &amp; Two Man Riot</h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Thu, Nov 2, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					8:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/501075/five-headed-cobra-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry alt roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/489025" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/06/two-lanes-tickets_11-03-23_23_648fdcdf4cb67.png"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/489025" title="More Info">
+					Two Lanes				</a>
+</h3>
+<h4 class="supporting animated">with obli</h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Fri, Nov 3, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					9:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/489025/two-lanes-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/507676" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/10/emotional-oranges-dj-set-tickets_11-04-23_23_6526ff8968135.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/507676" title="More Info">
+					Emotional Oranges (DJ Set) - ONE NIGHT ONLY				</a>
+</h3>
+<h4 class="supporting animated">Rory (DJ Set) and Chiiild (DJ Set)</h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Sat, Nov 4, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					9:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/507676/emotional-oranges-dj-set-one-night-only-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry alt roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/488258" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/06/pedro-capo-tickets_11-05-23_23_6478fc0c7f10f.png"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/488258" title="More Info">
+					Pedro Capó				</a>
+</h3>
+<h4 class="supporting animated"></h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Sun, Nov 5, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					8:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/488258/pedro-capo-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/497076" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/08/unknown-mortal-orchestra_08-04-23_24_64cd828441db5.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/497076" title="More Info">
+					Unknown Mortal Orchestra 				</a>
+</h3>
+<h4 class="supporting animated">with Amulets</h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Mon, Nov 6, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					8:30 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/497076/unknown-mortal-orchestra-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry alt roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/501246" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/08/tkay-maidza-tickets_11-07-23_23_64f114bcb1567.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/501246" title="More Info">
+					Tkay Maidza				</a>
+</h3>
+<h4 class="supporting animated"></h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Tue, Nov 7, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					8:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/501246/tkay-maidza-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/481764" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/04/saint-levant_04-24-23_24_6446b3e996fea.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour">From Gaza, With Love Tour</h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/481764" title="More Info">
+					Saint Levant				</a>
+</h3>
+<h4 class="supporting animated"></h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Fri, Nov 10, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					9:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/481764/saint-levant-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry alt roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/497819" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/08/bunt-tickets_11-11-23_23_64d58f7d91bf7.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour"></h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/497819" title="More Info">
+					BUNT.				</a>
+</h3>
+<h4 class="supporting animated"></h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Sat, Nov 11, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					9:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/497819/bunt-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/495503" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/07/drake-white-william-clark-green-tickets_11-14-23_23_64bea769485f6.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour">The Blow Up Your TV Tour</h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/495503" title="More Info">
+					Drake White &amp; William Clark Green				</a>
+</h3>
+<h4 class="supporting animated"></h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Tue, Nov 14, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					8:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/495503/drake-white-william-clark-green-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+<div class="entry alt roxy clearfix">
+<div class="thumb">
+<a href="https://www.theroxy.com/events/detail/494958" title="More Info">
+<img alt="" src="https://images.discovery-prod.axs.com/2023/07/barns-courtney-tickets_11-15-23_23_64b87bb2e48c0.jpg"/> </a>
+</div>
+<div class="info">
+<div class="title">
+<h5 class="presentedBy animated">Goldenvoice presents</h5>
+<h5 class="tour">Supernatural World Tour</h5>
+<h3 class="carousel_item_title_small">
+<a href="https://www.theroxy.com/events/detail/494958" title="More Info">
+					 Barns Courtney				</a>
+</h3>
+<h4 class="supporting animated"></h4>
+</div>
+<div class="date-time-container">
+<span class="date">
+<span class="fa fa-calendar-o"></span>
+				Wed, Nov 15, 2023			</span>
+<span class="time">
+<span class="fa fa-clock-o"></span>
+									Show
+					8:00 PM							</span>
+</div>
+</div>
+<div class="buttons">
+<a class="btn-tickets tickets status_1" href="https://www.axs.com/events/494958/barns-courtney-tickets?skin=roxy" target="_blank" title="Buy Tickets"><i class="fa fa-ticket fa-secondary"></i>Buy Tickets</a>
+</div>
+</div>
+</div>
+<div class="load-more-button">
+<button data-category="0" data-increment="20" data-offset="20" data-options="events" data-team="0" data-venue="0" disabled="disabled" id="loadMoreEvents">
+			    	Load More Events
+				</button>
+</div>
+</div>
+</div>
+<div class="ads_bottom no_print">
+<div class="adserve_728">
+<!-- AdGlare: The Roxy 728x90 -->
+<span id="zone900932938"></span>
+<script async="" src="//aegpresents.engine.adglare.net/?900932938"></script> </div>
+</div>
+<div class="sponsors">
+<ul>
+<li><a href="https://www.purelifewater.com/" target="_blank" title=""><img alt="" src="https://www.theroxy.com/assets/img/PL_K0_LOGO_200X200-2fd77168e2.png"/></a></li>
+<li><a href="https://drink818.com/" target="_blank" title=""><img alt="" src="https://www.theroxy.com/assets/img/818-logo-a3ef18f24a.png"/></a></li>
+<li><a href="https://juneshine.com/" target="_blank" title=""><img alt="" src="https://www.theroxy.com/assets/img/june-shine-50-d2c98c8ddd.png"/></a></li>
+<li><a href="https://www.explorenomadica.com/" target="_blank" title=""><img alt="" src="https://www.theroxy.com/assets/img/Nomadica_White-60-3a4c047dca.png"/></a></li>
+<li><a href="https://www.t-mobile-concert-perks.com/" target="_blank" title=""><img alt="" src="https://www.theroxy.com/assets/img/tmo-carbonhouse-800911fa90.png"/></a></li>
+<li><a href="https://youneedthissnack.com/" target="_blank" title=""><img alt="" src="https://www.theroxy.com/assets/img/help-center-logo-white-carbonhouse200-953cb471c1.png"/></a></li>
+<li><a href="https://jblpro.com/en-US" target="_blank" title=""><img alt="" src="https://www.theroxy.com/assets/img/JBL_Professional_brand_logo_by_harman_white-7e03c783d5.png"/></a></li>
+<li><a href="https://www.drinkoriginwater.com/collections/sparkling" target="_blank" title=""><img alt="" src="https://www.theroxy.com/assets/img/origin-logo-60-f02195a4f4.png"/></a></li>
+</ul>
+</div>
+</div>
+</div>
+<footer class="footer">
+<div class="footer-holder clearfix">
+<div class="footer_logo">
+<a href="" target="_blank">
+<img alt="" src="https://www.theroxy.com/assets/img/axs_logo-317271e5fd.png"/> </a>
+</div>
+<div class="venueinfo">
+<address>
+<span class="venue_title">The Roxy Theatre</span><br/>
+													9009 Sunset Boulevard<br/>
+							West Hollywood, California 90069
+																	</address>
+</div>
+<div class="nav">
+<ul>
+<li><a class="page_6 active" href="https://www.theroxy.com/events">Shows</a></li><li><a class="page_12" href="https://www.theroxy.com/faqs">FAQ</a></li></ul><ul><li><a class="page_9" href="https://www.theroxy.com/box-office">Box Office</a></li><li><a class="page_10" href="https://www.theroxy.com/venue-info/directions">Venue Info</a></li></ul><ul><li><a class="page_11" href="https://www.theroxy.com/special-events">Special Events</a></li> </ul>
+</div>
+</div>
+<div class="global-footer">
+<div class="global_wrapper">
+<p>
+<span class="rights_reserved">Copyright © 2023		 AEG Presents. 		 All Rights Reserved.</span>
+<a href="https://www.theroxy.com/sitemap">Site Map</a> <span class="delimiter">|</span>
+<a href="https://www.theroxy.com/terms-of-use">Terms &amp; Conditions</a> <span class="delimiter">|</span>
+<a href="https://www.aegworldwide.com/privacy-policy" target="_blank">Privacy Policy</a> <span class="delimiter">|</span>
+<a class="privacy-choices-link" href="https://privacyportal.onetrust.com/webform/c7968fb5-dd42-4c76-8f79-3e5198bd1303/7de12396-94a5-474f-872b-fa530ab42b5c" target="_blank">Your Privacy Choices</a>
+<a href="http://www.carbonhouse.com" id="carbonhouse" target="_blank" title="a carbonhouse experience">a <span class="carbon">carbon</span><span class="house">house</span> experience</a> </p>
+</div>
+</div>
+</footer>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "The Roxy Theatre",
+  "url": "https://www.theroxy.com/",
+  "sameAs": [
+    "https://www.twitter.com/theroxy", 
+"https://www.instagram.com/theroxy", 
+"https://www.facebook.com/theroxy"  ]
+}
+</script>
+<!-- Start Universal Pixel Snippet -->
+<script>
+!function(e,t,n,a,i,l,o,s,r){e[i]||(o=e[i]=function(){o.process?o.process.apply(o,arguments):o.queue.push(arguments)},o.queue=[],o.t=1*new Date,s=t.createElement(n),s.async=1,s.src=a+"?t="+Math.ceil(new Date/l)*l,r=t.getElementsByTagName(n)[0],r.parentNode.insertBefore(s,r))}(window,document,"script","//tracking.aegpresents.com/universalpixel/universalpixel.js","kl",864e5),kl("event","pageload");
+		</script>
+<!-- End Universal Pixel Snippet --><script>
+(function() {
+  var loadAlertBar = function loadAlertBar(){		
+		var alertMessage = document.getElementById('alertBarMessage');
+		
+        
+		if(alertMessage){
+			var alert = document.createElement('div');
+			alert.className = 'alertBars';
+			alert.innerHTML = '<strong style="color:#063E4B"> '+alertMessage.value+'</strong>';
+			alert.style.position = 'fixed';
+			alert.style.top = 0;
+			alert.style.left = 0;
+			alert.style.width = '100%';
+			
+			alert.style.background = '50px';
+			alert.style.borderColor= "rgba(255, 255, 255, 0.5)";
+			alert.style.backgroundColor= "#dcecc9";
+			alert.style.marginBottom= "0px";
+			alert.style.position= "fixed";
+			alert.style.width= "100%";
+			alert.style.textAlign= "center";
+			alert.style.top= "0";
+			alert.style.zIndex= "10000";
+			alert.style.padding= "10px 35px 10px 14px";
+			document.body.appendChild(alert);
+		}
+	}
+   
+    var oldonload = window.onload;
+   
+    var loadFunction = (typeof window.onload != 'function') ?
+      loadAlertBar : function() { oldonload(); loadAlertBar();};
+    
+    window.addEventListener ? 
+        window.addEventListener("load",loadFunction,false) : 
+        window.attachEvent && window.attachEvent("onload",loadFunction);
+  })();
+
+</script>
+</div>
+<script>
+		/**
+		/* Environemnt set here for javascript app or app.optimized
+		 */
+		SHOWTIME_ENV = "production";
+
+	</script>
+<script data-main="https://www.theroxy.com/assets/production/e87e739bcc//js/main" src="https://www.theroxy.com/assets/production/e87e739bcc//js/libs/require.min.js" type="text/javascript">
+</script>
+</body>
+</html>
