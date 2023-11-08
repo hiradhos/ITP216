@@ -41,12 +41,12 @@ def client():
     # TODO: Uncomment below when you're ready
     if not session.get("logged_in"):
         return redirect(url_for('home'))
-    elif session['username'] == 'admin':
+    elif session['username'] == 'admin': #if user is admin, render the user list and give admin client privileges
         return render_template('admin.html',
                                username=session['username'],
                                message='Welcome admin!',
                                result=fdb.db_get_user_list(db_file="./util/foods_db_file.json"))
-    else:
+    else: #otherwise, if user then render their favorite food and give user client privileges
         return render_template('user.html',
                                username=session['username'],
                                fav_food= fdb.db_get_food(session['username']))
@@ -65,9 +65,9 @@ def create_user():
     """
     # TODO: your code goes here and replaces 'pass' below
     if request.method == "POST":
-        if not session.get("logged_in"):
+        if not session.get("logged_in"): #if not logged in as admin, then redirect to login page
             return redirect(url_for('home'))
-        else:
+        else: #otherwise, use db_create_user function to add user and re-render admin page
             fdb.db_create_user(request.form["username"], request.form["password"])
             return render_template('admin.html',
                             username=session['username'],
@@ -87,10 +87,10 @@ def remove_user():
                 re-renders admin.html otherwise
     """
     # TODO: your code goes here and replaces 'pass' below
-    if request.method == "POST":
+    if request.method == "POST": #check if admin is logged in
         if not session.get("logged_in"):
             return redirect(url_for('home'))
-        else:
+        else: #use db_remove_user function to remove user and re-render admin page
             fdb.db_remove_user(request.form["username"])
             return render_template('admin.html',
                             username=session['username'],
@@ -111,9 +111,9 @@ def set_food():
     """
     # TODO: your code goes here and replaces 'pass' below
     if request.method == "POST":
-        if not session.get("logged_in"):
+        if not session.get("logged_in"): #check if user is logged in to be able to change food
             return redirect(url_for('home'))
-        else:
+        else: #if logged in, use db_set_food function to change food and re-render user page
             fdb.db_set_food(session["username"], request.form["set_fav_food"])
             return render_template('user.html',
                                    username=session['username'],
@@ -132,16 +132,12 @@ def login():
                 redirects back to home otherwise
     """
     # TODO: your code goes here and replaces 'pass' below
-    if request.method == "POST":
-        if request.form["username"] == "admin" and request.form["password"] == "pass":
+    if request.method == "POST": #use db_check_creds function to ensure username and password key-value pair match
+        if fdb.db_check_creds(fdb.load_json_file_to_dict('./util/creds_db_file.json'), request.form["username"], request.form["password"]):
             session["username"] = request.form["username"]
             session["logged_in"] = True
             return redirect(url_for('client'))
-        elif fdb.db_check_creds(fdb.load_json_file_to_dict('./util/creds_db_file.json'), request.form["username"], request.form["password"]):
-            session["username"] = request.form["username"]
-            session["logged_in"] = True
-            return redirect(url_for('client'))
-        else:
+        else: #if not match, re-render login page
             return redirect(url_for('home'))
 
 
@@ -154,7 +150,7 @@ def logout():
     :return: redirects back to home
     """
     # TODO: your code goes here and replaces 'pass' below
-    if request.method == "POST":
+    if request.method == "POST": #to log out, reset session gobal variables and then redirect to login page
         session["logged_in"] = False
         session.pop("username", None)
     return redirect(url_for('home'))
@@ -165,6 +161,27 @@ def logout():
 if __name__ == "__main__":
 
     # TODO: Unit test your other db_ functions here
+    # relative paths did not work on Windows system; absolute paths used instead
+    #Test json saving and loading functions
+    foods_path = r"C:\Users\hosse\Desktop\Github\ITP216\Week10Flask\ITP216_HW10_Hosseini_Hirad\ITP-216 H10 Starter Code\util\foods_db_file.json"
+    creds_path = r"C:\Users\hosse\Desktop\Github\ITP216\Week10Flask\ITP216_HW10_Hosseini_Hirad\ITP-216 H10 Starter Code\util\creds_db_file.json"
+    foods_dict = {"newUser": "not set yet", "user1": "oreos", "user2": "popcorn", "janice": "boba", "joe": "ice cream", "james": "not set yet"}
+    foods_json = fdb.save_dict_to_json_file(foods_dict, foods_path)
+    foods_dict_loaded = fdb.load_json_file_to_dict(foods_path)
+    assert foods_dict_loaded == foods_dict
+    creds_dict = {"admin": "password","newUser": "newPassword", "user1": "pass1", "user2": "pass2", "janice": "pass3", "joe": "pass4", "james": "pass782"}
+    creds_json = fdb.save_dict_to_json_file(creds_dict, creds_path)
+    creds_dict_loaded = fdb.load_json_file_to_dict(creds_path)
+    assert creds_dict_loaded == creds_dict
+    #Test various user administration functions
+    fdb.db_create_user("joseph", "pass2341234")
+    fdb.db_set_food("joseph", "meatballs")
+    print(fdb.db_get_user_list(creds_path))
+    print(fdb.db_get_food("joseph"))
+    fdb.db_remove_user("joseph")
+    print(fdb.db_get_user_list(creds_path))
+    assert fdb.db_check_creds(creds_dict, 'user1', 'pass1') is True
+
 
     app.secret_key = os.urandom(12)
     app.run(debug=True)

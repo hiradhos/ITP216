@@ -1,6 +1,7 @@
 import json
 from typing import Tuple, Optional, Any
 
+#relative paths did not work on Windows system; absolute paths used instead
 creds_db_file = r"C:\Users\hosse\Desktop\Github\ITP216\Week10Flask\ITP216_HW10_Hosseini_Hirad\ITP-216 H10 Starter Code\util\creds_db_file.json"
 foods_db_file = r"C:\Users\hosse\Desktop\Github\ITP216\Week10Flask\ITP216_HW10_Hosseini_Hirad\ITP-216 H10 Starter Code\util\foods_db_file.json"
 
