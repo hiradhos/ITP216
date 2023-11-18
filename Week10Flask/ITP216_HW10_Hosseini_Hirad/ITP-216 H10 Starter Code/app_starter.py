@@ -1,3 +1,18 @@
+# Hirad Hosseini, hiradhos@usc.edu
+# ITP 216, Fall 2023
+# Section: 32081
+# HW 10
+# Description:
+# Describe what this program does in your own words such as:
+'''
+This program constructs a Flask app which allows the user to either add or
+
+remove users along with modifying their favorite foods (if admin) or to log-in
+
+to an account and view their favorite food (if regular user).
+
+'''
+
 from flask import Flask, redirect, render_template, request, session, url_for
 import os
 
