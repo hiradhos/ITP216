@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ state }}</title>
+    </head>
+    <body>
+            <img src="{{ url_for('fig', state=state) }}" alt="Cases in {{ state }}">
+        <p>If you'd like a more specific insurance rate prediction for Medicare/Medical this year, we can provide a forecast based on your info below using machine learning!</p>
+            <form action="/submit_prediction" method="POST">
+            <p>Please enter your age (between 14 and 64 inclusive):
+                <input type="number" name="age" placeholder="20" min="14" max="64">
+                <input type="submit" value="Submit"></p>
+        </form>
+    </body>
+</html>

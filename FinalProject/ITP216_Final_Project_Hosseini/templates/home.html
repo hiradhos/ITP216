@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Insured.info </title>
+</head>
+<body>
+<h1>{{ message }}</h1>
+<p>
+    This is a simple data dashboard for viewing current insurance rates offered by Medicaid and Medicare for policyholders of varying backgrounds.
+    If you wish, you can input minimal personal information in order to view Medicaid/Medicare insurance rate estimates derived from a simple machine
+    learning model trained on 2024 CMS data. 
+    The data is provided courtesy of the <a target = "_blank" href="https://www.cms.gov/marketplace/resources/data/public-use-files">Center for Medicare & Medicaid Services</a>.
+</p>
+
+<h2>Medicare & Medicaid Rates for Given State</h2>
+<form action="/submit_state" method="POST">
+    Choose your State:
+    <SELECT name="state">
+    {% for s in states %}
+        {% if s == 'AK': %}
+            <OPTION value='{{s}}' selected>{{s}}</option>
+        {% else: %}
+            <OPTION value='{{s}}'>{{s}}</option>
+        {% endif %}
+    {% endfor %}
+    </SELECT>
+    <p><input type="submit" value="Submit"></p>
+</form>
+</body>
+</html>
